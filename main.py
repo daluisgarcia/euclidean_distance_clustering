@@ -35,7 +35,7 @@ def euclidean_clustering_epoch(data: np.ndarray, just_return_lowest_distance: bo
     print(f'Shortest distance: {min_distance}. In labels: {min_data_indexes[0]+1} and {min_data_indexes[1]+1}')
     print()
 
-    data[min_data_indexes[0]] = np.divide(np.add(data[min_data_indexes[0]], data[min_data_indexes[1]]), 2)
+    data[min_data_indexes[0]] = np.divide(np.add(data[min_data_indexes[0]], data[min_data_indexes[1]]), 2.0)
     
     data = np.delete(data, min_data_indexes[1], 0)
 
@@ -84,7 +84,7 @@ Main Function
 def main():
     # Initializing the data by reading it from CSV file
     data = pd.read_csv(csv_file_name)
-    data_np = data.to_numpy(copy=True)
+    data_np = data.to_numpy(dtype=np.dtype(float), copy=True)
     # Initializing the data labels
     data_attr_labels = list(data.columns.values)
     data_labels = [str(i+1) for i in range(len(data_np))]
