@@ -1,4 +1,4 @@
-# EUCLIDEAN DISTANCE CLUSTERING
+# Euclidean Distance Clustering
 A simple implementation of the Euclidean Distance Clustering algorithm in Python that allows to cluster your data using the euclidean distance and also prints the distance matrix for each epoch of the algorithm. 
 
 The program reads the data by a .csv file and plots a dendrogram and a radar plot of the final result. 
